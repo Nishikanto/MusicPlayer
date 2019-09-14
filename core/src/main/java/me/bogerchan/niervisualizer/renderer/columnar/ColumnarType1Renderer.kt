@@ -48,7 +48,7 @@ class ColumnarType1Renderer : IRenderer {
 
     private fun transformWaveValue(value: Byte, rectF: RectF) {
         rectF.bottom = ((value.toInt() and 0xFF).toFloat() - 128F) / 128F * mHalfHeight
-        rectF.bottom = if (rectF.bottom == 0F) 5F else rectF.bottom
+        rectF.bottom = if (rectF.bottom == 0F) 5F else rectF.bottom/1.5F   //(Nishikanto) This is where you can change the size of visualization bar
         rectF.top = - rectF.bottom
     }
 
